@@ -15,7 +15,32 @@ This application allows users to shorten long URLs into compact short codes, and
 * URLs expire after a defined period (default: 10 minutes)
 * Handles invalid/expired links with a custom 404 page
 * Frontend developed using HTML, CSS, JS
-* PostgreSQL as the database (via Docker Compose)
+* PostgreSQL as the database (used Railway for production)
+* Docker Compose used during local development
+
+---
+
+##  Live Project Links
+
+You can try the project live using the links below:
+
+###  Frontend
+The user interface is hosted on **GitHub Pages**.  
+Access it here:  
+[https://cheluri-ashokreddy.github.io/url-shortener-frontend/](https://cheluri-ashokreddy.github.io/url-shortener-frontend/)
+
+###  Backend (API)
+The backend server is deployed on **Render**.  
+This is where all the logic happens for shortening and redirecting URLs.
+
+- **Base URL**:  
+  [https://url-shortener-lxlb.onrender.com](https://url-shortener-lxlb.onrender.com)
+
+- **Example Endpoint for Shortening URLs**:  
+  `POST https://url-shortener-lxlb.onrender.com/shorten`
+
+###  Database
+The PostgreSQL database used for storing URLs and short codes is hosted on **Railway**, a cloud database platform.
 
 ---
 
@@ -38,7 +63,6 @@ url-shortener/
 ├── docker-compose.yml        
 ├── server.js                 
 └── README.md                
-
 ```
 
 ---
@@ -60,9 +84,7 @@ npm install
 
 ### 3. Set Up the PostgreSQL Database (Using Docker Compose)
 
-Instead of installing PostgreSQL manually, we use **Docker Compose** to run the database.
-
----
+If you are running this locally and don't want to install PostgreSQL manually, use Docker Compose.
 
 ####  Step 1: Start PostgreSQL using Docker Compose
 
@@ -76,12 +98,9 @@ docker-compose up -d
 
 This will pull the PostgreSQL image and start the database server in a container.
 
----
-
 ####  Step 2: Open pgAdmin and Create a Server
 
 Open pgAdmin in your browser:
-
 👉 [http://localhost:5050](http://localhost:5050)
 
 **Login Credentials:**
@@ -99,11 +118,9 @@ Open pgAdmin in your browser:
 
    * **Host name/address:** `localhost`
    * **Port:** `5432`
-   * **Username:** `postgres` (or the one from your `docker-compose`)
-   * **Password:** `postgres` (or the value from `.env` or Docker config)
+   * **Username:** `postgres`
+   * **Password:** `postgres`
 4. Click **Save** – your server is now connected.
-
----
 
 ####  Step 3: Create the `urls` Table
 
@@ -123,8 +140,6 @@ CREATE TABLE urls (
 );
 ```
 
----
-
 ####  Step 4: Add Environment Variables
 
 In the root folder of your project, create a `.env` file and add:
@@ -134,7 +149,7 @@ DATABASE_URL=postgres://<username>:<password>@localhost:5432/<your-db-name>
 PORT=5000
 ```
 
->  Replace `<username>`, `<password>`, and `<your-db-name>` with your actual PostgreSQL values.
+> Replace `<username>`, `<password>`, and `<your-db-name>` with your actual PostgreSQL values.
 
 ---
 
@@ -148,7 +163,7 @@ Server will run at: [http://localhost:5000](http://localhost:5000)
 
 ---
 
-##  API Endpoints
+## 📬 API Endpoints
 
 ### POST `/shorten`
 
@@ -176,24 +191,29 @@ Redirects to the original URL if valid and not expired.
 
 ##  Testing
 
-At first, I only developed the backend. After that, I used **Postman** to test the API.
+At first, I developed only the backend. To make sure everything worked, I tested it using **Postman**.
 
-- I checked if the long URL was getting shortened properly.
-- I tested whether visiting the short URL redirects to the original URL.
-- I also tried expired and invalid short URLs to see if correct error messages were shown.
+* I sent POST requests with long URLs to check if short links were created.
+* Then I opened the short URLs in the browser to see if they redirected properly.
+* I also tested expired and invalid links to confirm proper error handling.
 
-Once I got good results from Postman, I created a simple frontend using HTML, CSS, and JavaScript.
+After confirming everything was working fine in Postman, I created a frontend using HTML, CSS, and JavaScript to make the tool easier to use.
 
-Finally, I tested the whole project from the browser to make sure both frontend and backend worked well together.
-
+Finally, I deployed both frontend and backend online to make it publicly accessible.
 
 ---
-
-
 
 ##  Notes
 
 * URLs are set to expire in **10 minutes** by default (can be changed in code)
 * If the short URL is not found or expired, a custom 404 page is shown
+
+
+## 🙋‍♂ Author
+
+👨‍💻 [Ashok Reddy](https://www.linkedin.com/in/ashokreddycheluri-740603235/)
+
+Let me know if you want to add screenshots or further improvements!
+
 
 
