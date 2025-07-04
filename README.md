@@ -191,15 +191,28 @@ Redirects to the original URL if valid and not expired.
 
 ## 📬 API Testing with Postman
 
-I tested the backend API using **Postman** to make sure all endpoints work correctly before connecting it to the frontend.
+I tested the backend API using **Postman** to make sure all endpoints work properly before connecting it to the frontend.
 
-- Verified URL shortening and redirection
-- Checked error handling for invalid and expired URLs
+- Verified that long URLs are successfully shortened.
+- Checked if visiting the short URL redirects correctly.
+- Tested expired and invalid URLs for proper error handling.
 
-👉 You can access the same Postman collection I used for testing here:  
+###  Postman Collection Added
+
+The Postman collection used for testing the API is included in the project:
+
+
+You can import this collection in your Postman app to test the same endpoints.
+
+###  Public Link to Postman Collection
+
+I have also shared the Postman collection publicly. You can access it here:
+
 [🔗 Open Postman Collection](https://www.postman.com/workspace/My-Workspace~49e27bca-7536-41c7-84ec-08e44ffc1eb2/collection/33037136-4c69289c-c82a-410f-aa58-c35361808d9e?action=share&creator=33037136)
 
-> Make sure to set the base URL to `https://url-shortener-lxlb.onrender.com` while using this collection.
+>  **Note:** When using this collection, make sure to set the base URL as:  
+> `https://url-shortener-lxlb.onrender.com`
+
 ---
 ##  Testing
 
