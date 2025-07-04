@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "4c69289c-c82a-410f-aa58-c35361808d9e",
+		"name": "URLSHORTER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33037136"
+	},
+	"item": [
+		{
+			"name": "posturl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"url\": \"https://www.youtube.com/watch?v=D1pYd4b-7UM\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/shorten",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shorten"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/392e7f",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/392e7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"392e7f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
