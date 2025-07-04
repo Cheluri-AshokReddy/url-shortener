@@ -23,18 +23,22 @@ This application allows users to shorten long URLs into compact short codes, and
 
 ```
 url-shortener/
-├── public/             # Frontend static files
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
+├── public/                   # Frontend static files
+│   ├── index.html            # Main UI for shortening URLs
+│   ├── 404.html              # Custom 404 page for broken/expired links
+│   ├── style.css             # Styles for index and 404 pages
+│   ├── script.js             # Logic to handle shorten/copy events
+│   └── assets/
+│       └── HomePage.png      # HomePage
 ├── routes/
-│   └── urlshortener.js # Main route handler
+│   └── urlshortener.js       # Express route handlers (shorten + redirect)
 ├── config/
-│   └── db.js           # PostgreSQL DB configuration
-├── .env                # Environment variables
-├── docker-compose.yml  # PostgreSQL via Docker
-├── server.js           # Entry point of the app
-└── README.md
+│   └── db.js                 # PostgreSQL database config
+├── .env                      # Environment config (DB URL, PORT)
+├── docker-compose.yml        # Docker setup for PostgreSQL + pgAdmin
+├── server.js                 # Main entry point of the Node server
+└── README.md                 # You're reading it 
+
 ```
 
 ---
