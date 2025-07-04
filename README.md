@@ -1,6 +1,6 @@
-Project Banner](public/assets/HomePage.png)
+![Project Banner](https://raw.githubusercontent.com/Cheluri-AshokReddy/url-shortener/main/public/assets/HomePage.jpg)
 
-# 🧩 URL Shortener API
+#  URL Shortener API
 
 A simple and lightweight URL shortener built using Node.js, Express.js, and PostgreSQL.
 
@@ -8,7 +8,7 @@ This application allows users to shorten long URLs into compact short codes, and
 
 ---
 
-## 🚀 Features
+##  Features
 
 * Shorten any valid long URL
 * Redirect to the original URL using the shortcode
@@ -19,7 +19,7 @@ This application allows users to shorten long URLs into compact short codes, and
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 url-shortener/
@@ -39,7 +39,7 @@ url-shortener/
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙ Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -60,7 +60,7 @@ Instead of installing PostgreSQL manually, we use **Docker Compose** to run the 
 
 ---
 
-#### ✅ Step 1: Start PostgreSQL using Docker Compose
+####  Step 1: Start PostgreSQL using Docker Compose
 
 Make sure Docker is installed and running.
 
@@ -74,7 +74,7 @@ This will pull the PostgreSQL image and start the database server in a container
 
 ---
 
-#### ✅ Step 2: Open pgAdmin and Create a Server
+####  Step 2: Open pgAdmin and Create a Server
 
 Open pgAdmin in your browser:
 
@@ -101,7 +101,7 @@ Open pgAdmin in your browser:
 
 ---
 
-#### ✅ Step 3: Create the `urls` Table
+####  Step 3: Create the `urls` Table
 
 After connecting the server:
 
@@ -121,7 +121,7 @@ CREATE TABLE urls (
 
 ---
 
-#### ✅ Step 4: Add Environment Variables
+####  Step 4: Add Environment Variables
 
 In the root folder of your project, create a `.env` file and add:
 
@@ -130,7 +130,7 @@ DATABASE_URL=postgres://<username>:<password>@localhost:5432/<your-db-name>
 PORT=5000
 ```
 
-> 🔁 Replace `<username>`, `<password>`, and `<your-db-name>` with your actual PostgreSQL values.
+>  Replace `<username>`, `<password>`, and `<your-db-name>` with your actual PostgreSQL values.
 
 ---
 
@@ -144,7 +144,7 @@ Server will run at: [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 📬 API Endpoints
+##  API Endpoints
 
 ### POST `/shorten`
 
@@ -176,22 +176,22 @@ You can use [Postman](https://www.postman.com/) or your frontend form to test th
 
 ---
 
-## 📦 Deployment
+##  Deployment
 
 You can deploy this app to any platform (e.g. Render, Railway, Vercel backend).
 
 ---
 
-## 🧠 Notes
+##  Notes
 
 * URLs are set to expire in **10 minutes** by default (can be changed in code)
 * If the short URL is not found or expired, a custom 404 page is shown
 
 ---
 
-## 🙋‍♂️ Author
+##  Author
 
-👨‍💻 [Ashok Reddy](https://www.linkedin.com/in/ashokreddycheluri-740603235/)
+ [Ashok Reddy](https://www.linkedin.com/in/ashokreddycheluri-740603235/)
 
 ---
 
