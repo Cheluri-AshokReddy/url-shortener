@@ -66,7 +66,7 @@ Instead of installing PostgreSQL manually, we use **Docker Compose** to run the 
 
 ####  Step 1: Start PostgreSQL using Docker Compose
 
-Make sure Docker is installed and running.
+Make sure Docker is installed and running in desktop.
 
 In the project folder (where your `docker-compose.yml` is located), open a terminal and run:
 
