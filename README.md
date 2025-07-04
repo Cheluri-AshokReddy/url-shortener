@@ -203,5 +203,3 @@ Finally, I tested the whole project from the browser to make sure both frontend 
  [Ashok Reddy](https://www.linkedin.com/in/ashokreddycheluri-740603235/)
 
 ---
-
-Let me know if you want to include screenshots or setup instructions for deployment.
