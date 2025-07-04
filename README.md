@@ -196,10 +196,4 @@ Finally, I tested the whole project from the browser to make sure both frontend 
 * URLs are set to expire in **10 minutes** by default (can be changed in code)
 * If the short URL is not found or expired, a custom 404 page is shown
 
----
 
-##  Author
-
- [Ashok Reddy](https://www.linkedin.com/in/ashokreddycheluri-740603235/)
-
----
