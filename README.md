@@ -174,7 +174,7 @@ Redirects to the original URL if valid and not expired.
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 At first, I only developed the backend. After that, I used **Postman** to test the API.
 
