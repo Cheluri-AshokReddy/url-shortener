@@ -1,4 +1,4 @@
-![Project Banner](https://raw.githubusercontent.com/Cheluri-AshokReddy/url-shortener/main/public/assets/HomePage.jpg)
+![Project Banner](https://raw.githubusercontent.com/Cheluri-AshokReddy/url-shortener/main/public/assets/HomePage.jpg) 
 
 #  URL Shortener API
 
