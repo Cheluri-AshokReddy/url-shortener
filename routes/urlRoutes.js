@@ -16,8 +16,7 @@ router.post('/shorten', async (req, res) => {
 
   const shortCode = crypto.randomBytes(3).toString('hex'); 
   const createdAt = new Date();
-  //const expiresAt = new Date(createdAt.getTime() + 10 * 60 * 1000); 
-  const expiresAt = new Date(createdAt.getTime() + 2 * 1000); // 2 seconds
+  const expiresAt = new Date(createdAt.getTime() + 10 * 60 * 1000); 
 
   try {
     const result = await pool.query(
