@@ -17,7 +17,6 @@ router.post('/shorten', async (req, res) => {
   const shortCode = crypto.randomBytes(3).toString('hex'); 
   const createdAt = new Date();
   const expiresAt = new Date(createdAt.getTime() + 10 * 60 * 1000); 
-
   try {
     const result = await pool.query(
       'INSERT INTO urls (original_url, shortcode, created_at, expires_at) VALUES ($1, $2, $3, $4) RETURNING *',
