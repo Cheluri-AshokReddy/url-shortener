@@ -176,15 +176,20 @@ Redirects to the original URL if valid and not expired.
 
 ## 🧪 Testing
 
-You can use [Postman](https://www.postman.com/) or your frontend form to test the API.
+At first, I only developed the backend. After that, I used **Postman** to test the API.
+
+- I checked if the long URL was getting shortened properly.
+- I tested whether visiting the short URL redirects to the original URL.
+- I also tried expired and invalid short URLs to see if correct error messages were shown.
+
+Once I got good results from Postman, I created a simple frontend using HTML, CSS, and JavaScript.
+
+Finally, I tested the whole project from the browser to make sure both frontend and backend worked well together.
+
 
 ---
 
-##  Deployment
 
-You can deploy this app to any platform (e.g. Render, Railway, Vercel backend).
-
----
 
 ##  Notes
 
