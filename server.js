@@ -18,7 +18,7 @@ const corsOptions = {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      console.log(`❌ Blocked by CORS: ${origin}`);
+      console.log(` Blocked by CORS: ${origin}`);
       callback(new Error('Not allowed by CORS'));
     }
   },
@@ -41,9 +41,9 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
   try {
     await pool.query('SELECT NOW()');
-    console.log(`✅ DB connected at: ${new Date().toISOString()}`);
-    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(` DB connected at: ${new Date().toISOString()}`);
+    console.log(` Server running on port ${PORT}`);
   } catch (err) {
-    console.error('❌ DB connection error:', err.message);
+    console.error(' DB connection error:', err.message);
   }
 });
