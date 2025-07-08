@@ -8,16 +8,13 @@ const pool = require('./config/db');
 
 dotenv.config();
 
-// Allowed origins
 const allowedOrigins = [
   'https://cheluri-ashokreddy.github.io',
   'http://localhost:3000'
 ];
 
-// CORS configuration
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin (like curl or some browser GETs)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -25,26 +22,21 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: true
 };
 
 app.use(cors(corsOptions));
-
-// Middleware
+app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Routes
 app.use('/', urlRoutes);
 
-// 404 fallback
 app.use((req, res) => {
   res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
-// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
   try {
